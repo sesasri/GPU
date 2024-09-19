@@ -14,6 +14,7 @@ The configuration is maintqined in "/etc/oracle-cloud-agent/plugins/oci-hpc/oci-
 
 Below block refers to the default settings 
 
+'''
 "default-settings": {
             "rdma_network": "**10.224.0.0/12**",
             "overwrite_config_files": false,
@@ -25,6 +26,7 @@ Below block refers to the default settings
             "netmask": "**255.240.0.0**",
             "override_netconfig_netmask": "**255.240.0.0**"
         },
+        '''
 
 Depending on the VCN size, the RDMA network can be changed to ensure it does not conflict with the existing CIDR range.
 
@@ -33,6 +35,8 @@ Depending on the VCN size, the RDMA network can be changed to ensure it does not
 Once the RDMA CIDR and network/override netmask are changed to desired value, run the below command
 
 **snap restart oracle-cloud-agent**
+
+Validate the changes are in effect by running ip addr 
 
 Please note that the existing workload on the GPU node could get impacted.
 
