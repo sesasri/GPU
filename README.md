@@ -16,15 +16,15 @@ Below block refers to the default settings
 
 ```
 "default-settings": {
-            "rdma_network": "**10.224.0.0/12**",
+            "rdma_network": "10.224.0.0/12",
             "overwrite_config_files": false,
             "single_subnet": true,
             "modify_subnet": true,
             "modify_arp": true
         },
         "subnet-settings": {
-            "netmask": "**255.240.0.0**",
-            "override_netconfig_netmask": "**255.240.0.0**"
+            "netmask": "255.240.0.0",
+            "override_netconfig_netmask": "255.240.0.0"
         },
 ```
 
