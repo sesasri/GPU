@@ -1,4 +1,4 @@
-# Changing RDMA IP Range for GPU
+# Changing RDMA CIDR for GPU
 
 ## RDMA Config Details
 
