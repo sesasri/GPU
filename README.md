@@ -40,4 +40,13 @@ Validate the changes are in effect by running ip addr
 
 Please note that the existing workload on the GPU node could get impacted.
 
+## Validate IP address change ##
+
+```
+for i in {0..15};
+do
+   rdmaip=$(ip addr show dev rdma$i|egrep inet|egrep -v inet6 |awk '{print $2}');echo $rdmaip ;
+done
+
+```
 
