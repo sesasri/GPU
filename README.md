@@ -50,3 +50,7 @@ done
 
 ```
 
+Log files for OCA is available at /var/log/oracle-cloud-agent/plugins
+
+The log entries for CIDR change as well as series of IP commands run can be viewed in /var/log/oracle-cloud-agent/plugins/oci-hpc/oci-hpc-configure/oci-hpc-rdma-configure.log
+
