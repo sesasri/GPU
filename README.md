@@ -1,2 +1,4 @@
-# GPU
-Non Proprietary Information
+# Changing RDMA IP Range for GPU
+
+## CIDR Range Requirements
+### 
