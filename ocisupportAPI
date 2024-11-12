@@ -1,6 +1,6 @@
-# OCI Support Requests can be created with OCI APIs, OCI SDK or OCI CLI
+#OCI Support Requests can be created with OCI APIs, OCI SDK or OCI CLI#
 
-## Creating Support Requests with OCI CLI
+## Creating Support Requests with OCI CLI ##
 
 oci support incident create \
                     --compartment-id ocid1.tenancy.oc1..aaaaaaaaubrkzed3mzqxtsxx4qnfgmcmoh5mm7XXXXX --description "test this is for demo" \
@@ -11,7 +11,7 @@ oci support incident create \
                     --homeregion us-ashburn-1 --ocid ocid1.user.oc1..aaaaaaaanclxin474nk5wasasyxxjy5jgkroipp36xiq56s4q \
                     --region us-ashburn-1
 
-### Use the Support Management CLI to manage support requests with oci support call
+### Use the Support Management CLI to manage support requests with oci support call ###
 
    Options available are
          • incident
@@ -24,7 +24,7 @@ oci support incident create \
        • validation-response
          • validate-user
 
-#### Example Output is given below
+#### Example Output is given below ####
 
 {
   "data": {
@@ -62,7 +62,7 @@ oci support incident create \
   }
 }
 
-### Listing Support Tickets
+### Listing Support Tickets ####
 
  oci support incident list --compartment-id ocid1.tenancy.oc1..aaaaaaaaubrkzed3mXXXXr33e3joefrayjnrmf7oa  --csi 21450908 --ocid ocid1.user.oc1..aaaaaaaanclxin474nk5w6jtfuxxxxxpp36xiq56s4q --region us-ashburn-1 --all
 
