@@ -105,3 +105,10 @@ oci support incident create \
   ]
 }
 ```
+
+## Document References
+
+https://docs.oracle.com/en-us/iaas/api/#/en/incidentmanagement/20181231/Incident/CreateIncident
+https://docs.oracle.com/en-us/iaas/api/#/en/incidentmanagement/20181231/Incident/GetIncident
+https://docs.oracle.com/en-us/iaas/api/#/en/incidentmanagement/20181231/IncidentResourceType/
+
