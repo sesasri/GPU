@@ -15,9 +15,16 @@ Ensure bastion/operator node has OCI SDK/CLI, Kubectl installed
 Ensure kubeconfig file has been created
 
 We are just worried about RDMA capable GPU shapes. Run the below command to validate if the GPU shapes are part of the cluster
-'''
+
+```
 kubectl get nodes -l 'node.kubernetes.io/instance-type in (BM.GPU.H100.8, BM.GPU.A100-v2.8, BM.GPU4.8, BM.GPU.B4.8)'  -o wide
-'''
+```
+or
+
+```
+kubectl get nodes -o json |jq -r '.items[] | select (.metadata.labels."nvidia.com/gpu" == "true" or .metadata.labels."amd.com/gpu" == "true") ' 
+```
+
 
 Sample Output
 ```
