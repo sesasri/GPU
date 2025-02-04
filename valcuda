@@ -1,0 +1,15 @@
+import torch
+
+def check_gpu_support():
+    if torch.cuda.is_available():
+        print("GPU support detected.")
+        for i in range(torch.cuda.device_count()):
+            gpu = torch.cuda.get_device_properties(i)
+            if gpu.major >= 5 and gpu.minor >= 3:
+                print(f"GPU {gpu.name} supports half precision (compute capability {gpu.major}.{gpu.minor}).")
+            else:
+                print(f"GPU {gpu.name} does not support half precision.")
+    else:
+        print("No GPU support detected.")
+
+check_gpu_support()
