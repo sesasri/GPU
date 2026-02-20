@@ -1,0 +1,72 @@
+# Install langchain-oci package; OCI SDK is also needed
+# pip install -U langchain-oci 
+# 
+
+from langchain_oci import (
+    ChatOCIGenAI,
+    load_image,
+    encode_image,
+    is_vision_model,
+)
+from langchain_core.messages import HumanMessage
+import requests
+
+# Vision-capable model
+model_id = "google.gemini-2.5-pro"
+
+# Optional but recommended: verify vision support
+if not is_vision_model(model_id):
+    raise ValueError(f"{model_id} does not support vision inputs")
+
+# Initialize OCI GenAI chat model
+llm = ChatOCIGenAI(
+    model_id=model_id,
+    compartment_id="ocid1.compartment.oc1..aaaaaaaamjxynn55q2nddbeur3zwnkzis4yogjtxxxxxxxxxxxxxxxxxxxxx",
+    service_endpoint="https://inference.generativeai.us-chicago-1.oci.oraclecloud.com",
+)
+
+# ----------------------------
+# Option 1: Load image from local file
+# ----------------------------
+message = HumanMessage(
+    content=[
+        {"type": "text", "text": "Summarize this document."},
+        load_image("./001.png"),
+    ]
+)
+
+result = llm.invoke([message])
+print(result.content)
+
+# ----------------------------
+# Streaming invocation
+# ----------------------------
+for chunk in llm.stream([message]):
+    if chunk.content:
+        print(chunk.content, end="", flush=True)
+
+# ----------------------------
+# Option 2: Encode image from URL or raw bytes
+# ----------------------------
+response = requests.get("https://claimgenius.com/wp-content/uploads/2021/09/Claim-Genius-Mentioned-In-Insurance-CIO-Outlook.pdf")
+response.raise_for_status()
+
+message = HumanMessage(
+    content=[
+        {"type": "text", "text": "Summarize this document."},
+        encode_image(response.content, mime_type="application/pdf"),
+    ]
+)
+
+# ----------------------------
+# Standard (non-streaming) invocation
+# ----------------------------
+result = llm.invoke([message])
+print(result.content)
+
+# ----------------------------
+# Streaming invocation
+# ----------------------------
+for chunk in llm.stream([message]):
+    if chunk.content:
+        print(chunk.content, end="", flush=True)
