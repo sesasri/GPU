@@ -1,4 +1,4 @@
-# OCI Generative AI Authentication & OpenAI Compatibility Guide
+# OCI Generative AI Authentication & OpenAI Compatible Code Examples
 
 ## OCI Authentication Methods
 
