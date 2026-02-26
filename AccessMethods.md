@@ -101,9 +101,8 @@ else:
         auth=OciUserPrincipalAuth(profile_name="DEFAULT"),
         compartment_id="ocid1.compartment.oc1..aaaaaaaamjxynn55q2nddbeur3zwnkzis4yogjtqkd6zzyoafngyv2647pfa",
     )
+
 ```
 
-
-
-    self.graph = self._build_graph()
-    self.memory = MemorySaver()
+📘 Langchain Full Example code:  https://github.com/sesasri/GPU/blob/main/langchain_conv_example_calc.py
+📘 OpenAI Full Example code:  https://github.com/sesasri/GPU/blob/main/langchain_conv_example_calc.py
