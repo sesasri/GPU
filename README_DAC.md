@@ -1,4 +1,4 @@
-```markdown
+
 # OCI Dedicated AI Cluster
 
 ## Table of Contents
@@ -86,7 +86,7 @@ or CLI.
 
 Specific permissions are needed to create DAC. Broad permission can be granted as shown below:
 
-```
+```markdown
 
 allow group <generative-ai-administrators> to manage generative-ai-family in tenancy
 
@@ -94,7 +94,7 @@ allow group <generative-ai-administrators> to manage generative-ai-family in ten
 
 or
 
-```
+```markdown
 
 allow group <generative-ai-administrators> to manage generative-ai-family in compartment genai
 
@@ -102,7 +102,7 @@ allow group <generative-ai-administrators> to manage generative-ai-family in com
 
 In environments that need fine grained control, you can provide specific permissions:
 
-```
+```markdown
 
 allow group <generative-ai-administrators> to manage generative-ai-family in tenancy
 
@@ -119,4 +119,3 @@ https://docs.oracle.com/en-us/iaas/Content/generative-ai/iam-policies.htm
 |--|---------------------|-----------------|
 | What is it? | OCI is fully managed LLM hosting platform; Oracle manages infrastructure, inference stack and provides pre-provisioned capacity (no autoscale yet) | Data Science is a fully managed and serverless platform for data science teams to build, train, and manage machine learning models |
 | What are the typical use cases? | LLM inference, Large-scale training, High-throughput GenAI workloads | Notebooks (Jupyter), Model development, Training jobs, Experiment tracking |
-```
