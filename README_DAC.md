@@ -54,13 +54,13 @@ Oracle Cloud Infrastructure (OCI) Data Science is a fully managed platform for t
 
 ## Permissions and Limits for Dedicated AI Cluster (DAC)
 
-DAC runs typically on NVIDIA A10, A100 or H100 GPUs. The number of accelerator cards are dependent on the model card and the number of model replica can be chosen based on the needs. Customers might not have the limits available for setting up DAC.
+DAC runs typically on NVIDIA A10, A100 or H100 GPUs. The number of accelerator cards are dependent on the model card and the number of model replica can be chosen based on the needs. Customers might not have the limits available for setting up DAC. 
 
 The appropriate limits can be requested from the limits page:  
 https://cloud.oracle.com/support/create/limit?source=chat&region=us-chicago-1  
 or CLI.
 
-### Typical limits:
+### Typical limits: (under Generative AI Service Category)
 
 - A100-40G Dedicated unit count  
 - A100-80G Dedicated unit count  
