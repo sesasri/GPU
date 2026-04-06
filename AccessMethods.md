@@ -106,4 +106,4 @@ else:
 
 📘 Langchain Full Example code:  https://github.com/sesasri/GPU/blob/main/langchain_conv_example_calc.py
 
-📘 OpenAI Full Example code:  https://github.com/sesasri/GPU/blob/main/langchain_conv_example_calc.py
+📘 OpenAI Full Example code:  https://github.com/sesasri/GPU/blob/main/open_ai_example_calc.py
